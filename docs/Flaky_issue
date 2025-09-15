@@ -1,0 +1,15 @@
+Part 1:
+Part 1: Identify Flakiness Issues
+1. Direct assert on page URL without waiting for navigation
+2. Checking element visibility immediately after click
+3. Using .all() on dynamic elements without waiting
+4. Hardcoded credentials ignoring 2FA which block some users
+5. The test runs differently in headless vs your local browser, causing unexpected failures
+
+
+Part 2: Explain Root Causes
+1. CI/CD environments are slower than local machines, so pages or elements may load later
+2. Dynamic elements may not be rendered immediately, causing assertions to fail
+3. If a user has two-factor authentication, the login may not finish automatically
+4. Headless browser behaves differently in CI
+

@@ -1,0 +1,16 @@
+part :2
+tests/
+  -> web/                     # Web UI tests
+      ->login/
+      ->dashboard_page/
+
+    ->api/                     
+    ->data/                    
+  -> configs/                 # Environment/browser configs
+     ->file.json
+
+  ->base/                    # Base classes
+    ->base_test.py        
+    ->base_api.py        
+        
+ 
